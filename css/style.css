@@ -344,7 +344,50 @@ box-sizing: border-box;
     margin-bottom: 5px;
 }
 
+/****** Activites ********/
+.activites{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+    
+    
+}
+.activites-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    
+    box-sizing: border-box;
+}
+.activites-cards .card{
+    display: flex;
+    flex-direction: column;
+    height: 439px;
+    width: auto;
+    padding: 0%;
 
+}
+.activites-cards .card img{
+    height: 85%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    box-sizing: border-box;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0%;
+    margin: 0%;
+}
+.activites-cards .card-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 /********** Footer *********/
 footer {
     height: 183px;
