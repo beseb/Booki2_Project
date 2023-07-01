@@ -17,7 +17,7 @@ h1 {
   }
   p {
     font-size: 16px;
-    font-size: 400;
+    font-weight: 400;
   }
 :root {
     --main-color: #0065FC;
@@ -34,6 +34,8 @@ body {
     flex-direction: column;
     justify-content: center;
 margin: auto;
+max-width: 1440px;
+min-width: 320px;
 }
 
 header {
@@ -114,6 +116,7 @@ a{
     flex-direction: column;
     justify-content: flex-start;
     gap: 35px;
+    margin-bottom: 30px;
   }
   .headline {
     display: flex;
