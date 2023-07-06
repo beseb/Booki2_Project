@@ -74,15 +74,17 @@ header {
 .menu li {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 75px;
+  border-top: solid transparent;
 }
 .menu li:hover {
   display: inherit;
-  border-top: solid;
-  color: #0065fc;
-  text-align: center;
-  padding: 30px;
+  border-top: solid #0065fc;
 }
-
+.menu li:hover a {
+  color: #0065fc;
+}
 
 .main-container {
   width: 100%;
@@ -196,7 +198,7 @@ form {
   align-items: center;
 }
 .txt-search-bar {
-  width: 160px;
+  width: fit-content;
   height: 49px;
   border-left: none;
   border-right: none;
@@ -232,7 +234,7 @@ form {
 }
 
 .btn-filter {
-  height: inherit;
+  height: 50px;
   width: 173px;
   background-color: white;
   border: 1px solid #d9d9d9;
@@ -256,8 +258,21 @@ form {
 .info-bar {
   display: flex;
   gap: 10px;
-
   width: 100%;
+  align-items: center;
+}
+.info-bar i {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid var(--grey-tint-2, #d9d9d9);
+  color: #0065fc;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -339,6 +354,7 @@ form {
 .hebergements-cards .card-content {
   padding: 0px 15px;
   margin: 0%;
+  margin-top: -10px;
   gap: 8px;
   display: flex;
   flex-direction: column;
@@ -349,6 +365,9 @@ form {
 .hebergements-cards .card-txt {
   margin: 0%;
   gap: 8px;
+}
+.hebergements-cards .card-title {
+  margin-bottom: 8px;
 }
 /****** Populaires ***********/
 .populaires {
@@ -433,6 +452,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 /********** Footer *********/
 footer {
@@ -457,6 +477,7 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 15px;
+
   flex-wrap: wrap;
   align-self: stretch;
   box-sizing: border-box;
@@ -464,7 +485,8 @@ footer {
 .footer-section a,
 h2 {
   display: inherit;
-  box-sizing: border-box;
+  gap: 0px;
+  margin: 0%;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -472,6 +494,17 @@ h2 {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  .info-group {
+    gap: 35px;
+  }
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .info-bar {
+    margin-top: 35px;
+  }
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -509,20 +542,23 @@ h2 {
     width: 100%;
   }
   .activites-cards .card img {
+    height: 70%;
     min-height: 200px !important;
     width: 100%;
     object-fit: cover;
   }
   .activites-cards .card-content {
     padding: 5%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
   .activites-cards .card-content .card-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    margin: 0;
+    padding: 5px;
   }
 }
 
@@ -531,7 +567,6 @@ h2 {
   body {
     width: 100vw;
     overflow-x: hidden;
-
     min-width: 320px;
     display: flex;
     align-items: center;
@@ -543,7 +578,6 @@ h2 {
     flex-direction: column;
     justify-items: stretch;
     align-items: center;
-    margin-bottom: 30px;
   }
   .logo-booki {
     margin: auto;
@@ -561,23 +595,29 @@ h2 {
   .menu li {
     width: 50%;
     text-align: center;
+    border-top: none;
+    border-bottom: solid transparent;
   }
+
   .menu li:hover {
     border-top: none;
     border-bottom: solid #0065fc;
-    padding: 0px;
+  }
+  .menu li:hover a {
+    color: #0065fc;
   }
   .main-container {
     width: 100%;
     display: flex;
     flex-grow: 1;
-    padding: 0px 20px;
+    padding: 0px 0px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 35px;
     align-self: stretch;
     box-sizing: border-box;
+    margin-top: 0%;
   }
   .main {
     width: inherit !important;
@@ -586,6 +626,8 @@ h2 {
 
   .info-group {
     align-items: center;
+    gap: 35px;
+    padding: 0px 20px;
   }
   .headline {
     height: auto;
@@ -617,51 +659,68 @@ h2 {
     justify-content: center;
     align-items: flex-start;
     align-self: stretch;
+    gap: 15px;
   }
   .filters {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    gap: 10px;
-
     padding: 0%;
     margin: 0%;
   }
   .btn-filter {
     height: 50px;
-    width: 48%;
-
-    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 19px;
+    flex: 1 0 0;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
   }
   .btn-filter i {
-    font-size: 17px;
+    width: 22px;
+    height: 22px;
   }
   .info-bar {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0%;
+    width: 100%;
   }
   .info-bar span {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     word-wrap: break-word;
+  }
+  .hebergements-and-populaires {
+    width: 100%;
   }
   .populaires {
     margin-top: 0%;
-    overflow: visible;
+    padding: 0%;
+    width: 100%;
+    order: 1;
+    border-radius: 0% !important ;
   }
   .populaires-cards {
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 0px;
   }
   .populaires-cards .card {
     width: 100%;
   }
   #hebergements {
     background-color: white;
+  }
+  .hebergements {
+    order: 2;
   }
   .hebergements-cards .cards-1-2-3 {
     display: flex;
@@ -685,10 +744,20 @@ h2 {
   }
   .activites-cards {
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
   .activites-cards .card {
-    min-width: 100%;
-    max-height: 70%;
+    min-width: 315px;
+    min-height: 200px;
+    height: 40%;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  #imgPomegues {
+    height: 210px;
   }
   footer {
     max-height: fit-content;
@@ -697,5 +766,8 @@ h2 {
   }
   .footer-section {
     justify-content: center;
+  }
+  .footer-section h2 {
+    margin: 0%;
   }
 }
