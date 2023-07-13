@@ -103,6 +103,11 @@ header {
   margin: 0;
   font-size: 22px;
 }
+.section-title-afficher-plus{
+    font-size: 18px;
+    font-weight: 700;
+    
+}
 
 .card {
   background-color: white;
@@ -228,6 +233,11 @@ form {
   gap: 15px;
   justify-content: flex-start;
   align-items: center;
+}
+.filter-title{
+    font-size: 18px;
+    font-weight: 700;
+    
 }
 .filters {
   display: flex;
@@ -488,8 +498,12 @@ footer {
   align-self: stretch;
   box-sizing: border-box;
 }
+.footer-section h4{
+    font-size: 18px;
+    font-weight: 700;
+}
 .footer-section a,
-h2 {
+h4 {
   display: inherit;
   gap: 0px;
   margin: 0%;
@@ -795,7 +809,7 @@ h2 {
   .footer-section {
     justify-content: center;
   }
-  .footer-section h2 {
+  .footer-section h4 {
     margin: 0%;
   }
 }
