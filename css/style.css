@@ -62,6 +62,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0px 25px;
+  margin: 0px 10px;
 }
 .menu ul {
   list-style: none;
@@ -418,9 +419,14 @@ form {
 .activites {
   display: flex;
   padding: 30px;
+  gap: 30px;
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
+}
+.section-title-activites{
+    font-size: 22px;
+    font-weight: 700;
 }
 .activites-cards {
   width: 100%;
@@ -592,7 +598,7 @@ h2 {
   }
   .menu {
     width: 100%;
-    margin: 0%;
+    margin: 0px;
     margin-top: -40px;
     padding: 0px;
   }
@@ -730,7 +736,7 @@ h2 {
     order: 2;
   }
   .hebergements .section-title {
-    font-size: 20px;
+    width: max-content;
   }
   .hebergements-cards .cards-1-2-3 {
     display: flex;
@@ -760,14 +766,14 @@ h2 {
     width: 100%;
     max-width: 583px;
   }
+
   .activites-cards {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
   .activites-cards .card {
-    /* min-width: 315px;
-    min-height: 200px; */
+
     height: auto;
     width: 100%;
     border-radius: 20px;
