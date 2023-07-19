@@ -42,7 +42,12 @@ body {
   min-width: 320px;
   width: 100vw;
   overflow-x: hidden;
+  
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Facultatif : pour rendre la barre invisible dans les navigateurs WebKit */
+  }
 
 header {
   height: 79px;
