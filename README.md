@@ -1,4 +1,4 @@
-[logo]('./images/logo/Booki.png')
+![logo]('./images/logo/Booki.png')
 # Booki
 
 ## Description
