@@ -1,6 +1,6 @@
 ![logo](/images/logo/Booki.png)
 # Booki
-
+![screenshot](/images/screenshot.png)
 ## Description
 
 - "Booki" is the 2nd student project from the OpenClassrooms "React Developer" path!
